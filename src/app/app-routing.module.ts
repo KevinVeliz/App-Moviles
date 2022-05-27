@@ -9,7 +9,7 @@ const redirectUnauthorizedToHome =()=> redirectLoggedInTo(['home']);
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
     ...canActivate(redirectUnauthorizedToHome)
   },
